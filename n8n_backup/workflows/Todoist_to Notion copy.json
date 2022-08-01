@@ -1,0 +1,800 @@
+{
+  "active": true,
+  "connections": {
+    "Todoist": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SplitInBatches": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "typeSetCode",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Interval": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "typeSetCode": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Notion2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Notion3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Notion4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [
+          {
+            "node": "Notion5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion": {
+      "main": [
+        [
+          {
+            "node": "Todoist1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion2": {
+      "main": [
+        [
+          {
+            "node": "Todoist1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion4": {
+      "main": [
+        [
+          {
+            "node": "Todoist1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion3": {
+      "main": [
+        [
+          {
+            "node": "Todoist1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion5": {
+      "main": [
+        [
+          {
+            "node": "Todoist1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NameSubCategory": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "NameCategory2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NameCategory2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "NameSubCategory",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "CategoryConversionTable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        [
+          {
+            "node": "Notion5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CategoryConversionTable": {
+      "main": [
+        [
+          {
+            "node": "Todoist",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-07-31T01:06:17.137Z",
+  "id": "2",
+  "name": "Todoist to Notion copy",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -1500,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "filters": {}
+      },
+      "name": "Todoist",
+      "type": "n8n-nodes-base.todoist",
+      "typeVersion": 1,
+      "position": [
+        20,
+        780
+      ],
+      "credentials": {
+        "todoistApi": {
+          "id": "1",
+          "name": "Todoist account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 6,
+        "unit": "seconds"
+      },
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        800,
+        1260
+      ],
+      "webhookId": "61682b0d-6a74-40fc-a7b3-684dea86f062"
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "name": "SplitInBatches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        280,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "taskId": "={{$node[\"SplitInBatches\"].json[\"id\"]}}"
+      },
+      "name": "Todoist1",
+      "type": "n8n-nodes-base.todoist",
+      "typeVersion": 1,
+      "position": [
+        3460,
+        820
+      ],
+      "credentials": {
+        "todoistApi": {
+          "id": "1",
+          "name": "Todoist account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "interval": 20,
+        "unit": "minutes"
+      },
+      "name": "Interval",
+      "type": "n8n-nodes-base.interval",
+      "typeVersion": 1,
+      "position": [
+        -1440,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "number": [
+            {
+              "name": "firstTypeCode",
+              "value": "={{$json[\"label_ids\"][0] || -1}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "typeSetCode",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        600,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": "83077007-4c56-4778-8ea7-0ccf23bf0354",
+        "title": "={{$node[\"SplitInBatches\"].json[\"content\"]}}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Name|title",
+              "title": "={{$node[\"SplitInBatches\"].json[\"content\"]}}"
+            },
+            {
+              "key": "Type|multi_select",
+              "multiSelectValue": "={{$json[\"Subcategory\"]}}"
+            }
+          ]
+        }
+      },
+      "name": "Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        2820,
+        380
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "3",
+          "name": "Notion account Work"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{$json[\"Category\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "work"
+            },
+            {
+              "value2": "side",
+              "output": 1
+            },
+            {
+              "value2": "perso",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        2480,
+        700
+      ],
+      "notesInFlow": true,
+      "notes": "0 - work\n1 - side\n2 - perso"
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{$node[\"Function2\"].json[\"category\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "mendo"
+            },
+            {
+              "value2": "info",
+              "output": 1
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "name": "Switch1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        2480,
+        1100
+      ],
+      "notesInFlow": true,
+      "notes": "0 - mendo\n1 - info\n"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": "97899275-8f74-4615-8550-ff62ed5ec8f7",
+        "title": "={{$node[\"SplitInBatches\"].json[\"content\"]}}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Name|title",
+              "title": "={{$node[\"SplitInBatches\"].json[\"content\"]}}"
+            },
+            {
+              "key": "subType|select",
+              "selectValue": "={{$json[\"Subcategory\"]}}"
+            }
+          ]
+        }
+      },
+      "name": "Notion2",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        2820,
+        660
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "4",
+          "name": "Notion account Perso"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": "3866653d-87f6-4dad-a5d6-dd4f8f67e3f9",
+        "title": "={{$node[\"SplitInBatches\"].json[\"content\"]}}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Name|title",
+              "title": "={{$node[\"SplitInBatches\"].json[\"content\"]}}"
+            },
+            {
+              "key": "Tags|multi_select",
+              "multiSelectValue": "={{$json[\"subCategory\"]}}"
+            }
+          ]
+        }
+      },
+      "name": "Notion3",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        2820,
+        880
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "6",
+          "name": "Notion account Mendo"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": "f14768b2-1e54-4a99-ae51-5e69046df709",
+        "title": "={{$node[\"SplitInBatches\"].json[\"content\"]}}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Name|title",
+              "title": "={{$node[\"SplitInBatches\"].json[\"content\"]}}"
+            },
+            {
+              "key": "Tags|multi_select",
+              "multiSelectValue": "={{$json[\"subCategory\"]}}"
+            }
+          ]
+        }
+      },
+      "name": "Notion4",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        2820,
+        1100
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "5",
+          "name": "Notion account Info"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": "1a70ad41-b927-41ac-ba12-88610e161bde",
+        "title": "={{$node[\"SplitInBatches\"].json[\"content\"]}}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Name|title",
+              "title": "={{$node[\"SplitInBatches\"].json[\"content\"]}}"
+            },
+            {
+              "key": "=Type|select",
+              "selectValue": "autre"
+            }
+          ]
+        }
+      },
+      "name": "Notion5",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        2820,
+        1400
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "3",
+          "name": "Notion account Work"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Category",
+              "value": "={{$node[\"CategoryConversionTable\"].json[$json[\"Subcategory\"]]||\"General\"}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "NameSubCategory",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "url": "=https://api.todoist.com/rest/v1/labels/{{$json[\"firstTypeCode\"]}}",
+        "options": {}
+      },
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        420
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "2",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Subcategory",
+              "value": "={{$json[\"name\"] || \"General\"}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "NameCategory2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "name": "Merge1",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        2100,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "sheetId": "11TM3gFl-JWz_7XujZRpU8PehkRFrHi72b26Pelz2fXU",
+        "range": "A:B",
+        "options": {}
+      },
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        -1100,
+        520
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "={{ $json[\"Category\"] }}",
+              "value": "={{ $json[\"SubCategory\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -880,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{$json[\"firstTypeCode\"]}}",
+              "operation": "notEqual",
+              "value2": -1
+            }
+          ]
+        }
+      },
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        920,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "// Code here will run only once, no matter how many input items there are.\n// More info and help: https://docs.n8n.io/nodes/n8n-nodes-base.function\n// Tip: You can use luxon for dates and $jmespath for querying JSON structures\n\n// Loop over inputs and add a new field called 'myNewField' to the JSON of each one\n\nlet res = {}\n\nfor (el of items){\n  console.log(el.json)\n  let key = Object.keys(el.json)[0]\n  console.log(key)\n  res[key]=el.json[key]\n  console.log(\"****************\")\n}\nreturn res;"
+      },
+      "name": "CategoryConversionTable",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        520
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "updatedAt": "2022-07-31T17:56:14.809Z"
+}
